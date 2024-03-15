@@ -101,7 +101,8 @@ app.get("/refresh", async (_req, res) => {
   //restart the server
   try {
     await connectWPP();
-    return res.status(200).send("Server restarted");
+    res.status(200).send("Server restarted");
+    return;
   } catch (error) {
     res.status(500).send("Error restarting server");
   }
