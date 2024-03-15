@@ -100,7 +100,7 @@ function start(client) {
 app.get("/refresh", async (_req, res) => {
   //restart the server
   try {
-    await connectWPP();
+    connectWPP();
     res.status(200).send("Server restarted");
     return;
   } catch (error) {
